@@ -1,0 +1,25 @@
+<!-- Footer where the player goes -->
+<section data-ng-controller="JPlayerController">
+    <div class="footer" data-ng-show="resultLoaded">
+        <div class='glyphicon live-stream-play glyphicon-play' id="jplayer-control" data-audio="streamAudio" data-autoplay="true" data-pauseothers="true" jplayer></div>
+
+        <div class="metadata">
+
+            <scroll-text value="{% raw %} {{ sheikh }} {% endraw %}" data-ng-if="resultLoaded" data-audio="audio1"></scroll-text>
+            <br>
+            <scroll-text value="{% raw %} {{ surah }} {% endraw %}" data-ng-show="surah.length > 9" data-ng-if="resultLoaded"></scroll-text>
+
+            <div class="album-art">
+                <span class="time">00:00</span>
+                <span class="divider">/</span>
+                <span id="duration"></span>
+            </div>
+
+        </div>
+
+        <div id="seekbar" class="seek-bar">
+            <div id="playbar" class="play-bar"></div>
+        </div>
+
+    </div>
+</section>

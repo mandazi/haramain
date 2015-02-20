@@ -1,7 +1,53 @@
+h1 {
+    font-size: 5.9vw !important;
+    text-transform: none !important;
+}
+h2 {
+    font-size: 3.0vh !important;
+    text-transform: none !important;
+}
+p {
+    font-size: 3.0vh !important;
+    text-transform: none !important;
+}
+
+body {
+    font-weight: 100 !important;
+}
+
+.all-metadata {
+    text-align: left;
+}
+
+.nav-header {
+    position: relative;
+    top: 14px;
+}
+
+.left-panel-header {
+    text-align: left;
+    position: relative;
+    left: 20px;
+    color: #3eb8bd;
+}
+
+.center-panel-header {
+    text-align: center;
+    color: gray;
+}
+
+.right-panel-header {
+    text-align: right;
+    position: relative;
+    right: 20px;
+    color: #3eb8bd;
+}
+
 .page-header {
     padding-bottom: 0 !important;
     margin: 0 !important;
     border-bottom: 0 !important;
+    height: 40px !important;
 }
 .page-header .navbar-nav {
     float: right;
@@ -23,7 +69,7 @@
     margin-left: 0
 }
 .content {
-    margin-top: 70px;
+    margin-top: 30px;
     width: 100%
 }
 footer {
@@ -50,3 +96,110 @@ footer p {
 /*.ng-valid.ng-dirty{*/
     /*border-color:#78FA89;*/
 /*}*/
+
+
+
+
+
+.footer {
+    background-color: #222222;
+    border-top: 1px solid black;
+    bottom: 0;
+    box-shadow: 0 0 5px 0 #bfbfbf;
+    height: 60px;
+    overflow: visible;
+    padding-bottom: 3px;
+    padding-top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+
+.live-stream-play {
+    color: #444;
+    font-size: 32px;
+    left: 15px;
+    position: relative;
+    top: 11px;
+    cursor: pointer;
+    z-index: 99999999;
+}
+
+.metadata {
+    text-align: center; color: black; position: relative; top: -29px; height: 50px; z-index: 999999;
+}
+
+.album-art {
+    left: -14px;
+    position: relative;
+    text-align: right;
+    top: -30px;
+}
+
+.play-song {
+    cursor: pointer;
+}
+
+.track-metadata {
+    font-size: 2.0vh;
+}
+
+
+#seekbar {
+    background: #EEEEEE;
+    cursor: pointer;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    top: -88px;
+    width: 100%;
+}
+#playbar {
+    background: #4DB6AC;
+    cursor: pointer;
+    height: 60px;
+    overflow:hidden;
+    width: 0;
+}
+#output {
+    font-family: monospace;
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+#info {
+    font-family: monospace;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+.pause {
+    display: none;
+}
+
+.now-playing {
+    float: right;
+    left: 40px;
+    position: relative;
+}
+
+.back-button {
+    position: relative; left: -40px
+}
+
+.prev-screen-top {
+    padding: 15px;
+    margin-left: 10px;
+}
+
+.now-playing-top {
+    padding: 15px;
+    margin-right: 10px;
+}
+
+a {
+    color: #4DB6AC !important;
+}

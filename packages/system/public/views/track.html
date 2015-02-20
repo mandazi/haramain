@@ -1,0 +1,21 @@
+<section class="welcome container-fluid" data-ng-controller="IndexController" data-ng-init="play()">
+ <!--   <a class="back-button" href back-button><span class="glyphicon glyphicon-circle-arrow-left"></span> Back</a> -->
+
+    <div class="all-metadata">
+        <h1 class="track-metadata" style="text-align: left">{{ track.sheikh }}</h1>
+        <h2 class="track-metadata" data-ng-show="track.surah.length > 9">{{ track.surah }}</h2>
+        <h2 class="track-metadata">{{ track.prayerlocation }}</h2>
+    </div>
+<!--
+    <div id="output">
+        <div class="play"><a href="#">Play</a></div>
+        <div class="pause"><a href="#">Pause</a></div>
+        <div class="time">00:00</div>
+    </div>-
+-->
+<!--
+    <div id="seekbar" class="seek-bar">
+        <div id="playbar" class="play-bar"></div>
+    </div>
+-->
+</section>

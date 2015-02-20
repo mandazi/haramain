@@ -1,8 +1,10 @@
 'use strict';
 
-angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
-  function($scope, Global) {
+angular.module('mean.system').controller('IndexController', ['$scope', 'Global', 'GetHaramainAudioData', '$rootScope',
+	'$stateParams', '$filter',
+  function($scope, Global, GetHaramainAudioData, $rootScope, $stateParams, $filter) {
     $scope.global = Global;
+
     $scope.sites = {
       'makeapoint':{
         'name':'makeapoint',
@@ -54,5 +56,65 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         console.log('currentSlide:', currentSlide);
       }
     });
+
+
+	  GetHaramainAudioData.then(function (response) {
+		  $rootScope.audioTracks = response.data;
+		  for (var i = 0; i < $rootScope.audioTracks.length; i+=1) {
+			  if ($rootScope.audioTracks[i].sheikh === undefined) {
+				  $rootScope.audioTracks[i].sheikh = $filter('getSheikhName')($rootScope.audioTracks[i].url);
+			  }
+		  }
+	  });
+
+	  $scope.play = function () {
+		  // if coming from the home page
+		  if ($scope.audioTracks) {
+			  $scope.track = $scope.audioTracks[$stateParams.trackId];
+
+			  $rootScope.streamAudio = $scope.track.url;
+
+
+			  $rootScope.sheikh = $scope.track.sheikh;
+			  $rootScope.surah = $scope.track.surah;
+
+			  $rootScope.resultLoaded = true;
+
+			  $rootScope.isPlaying = true;
+
+
+		  // if refreshing page / being linked directly to, get the list of audio tracks first
+		  } else {
+			  GetHaramainAudioData.then(function (response) {
+				  $rootScope.audioTracks = response.data;
+				  for (var i = 0; i < $rootScope.audioTracks.length; i+=1) {
+					  if ($rootScope.audioTracks[i].sheikh === undefined) {
+						  $rootScope.audioTracks[i].sheikh = $filter('getSheikhName')($rootScope.audioTracks[i].url);
+					  }
+				  }
+
+				  $scope.track = $rootScope.audioTracks[$stateParams.trackId];
+
+				  $rootScope.streamAudio = $scope.track.url;
+
+
+				  $rootScope.sheikh = $scope.track.sheikh;
+				  $rootScope.surah = $scope.track.surah;
+
+				  $rootScope.resultLoaded = true;
+
+				  $rootScope.isPlaying = true;
+
+			  });
+
+
+		  }
+
+
+
+
+	  };
+
+
   }
 ]);
