@@ -10,3 +10,16 @@ angular.module('mean.system').filter('getSheikhName', function() {
 	};
 });
 
+angular.module('mean.system').filter('validateSurah', function() {
+
+	return function (string) {
+		if (string) {
+			if (string.length < 9) {
+				return ' - ';
+			}
+			else {
+				return string.replace('(', '').replace(')', '');
+			}
+		}
+	};
+});

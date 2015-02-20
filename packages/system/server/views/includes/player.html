@@ -7,7 +7,7 @@
 
             <scroll-text value="{% raw %} {{ sheikh }} {% endraw %}" data-ng-if="resultLoaded" data-audio="audio1"></scroll-text>
             <br>
-            <scroll-text value="{% raw %} {{ surah }} {% endraw %}" data-ng-show="surah.length > 9" data-ng-if="resultLoaded"></scroll-text>
+            <scroll-text value="{% raw %} {{ surah | validateSurah }} {% endraw %}" data-ng-if="resultLoaded"></scroll-text>
 
             <div class="album-art">
                 <span class="time">00:00</span>

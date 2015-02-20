@@ -17,7 +17,7 @@
     			<td>
                     <a href="#!/track/{{$index}}">
                         <p>{{ item.sheikh }}</p>
-                        <p>{{ item.surah }}</p>
+                        <p>{{ item.surah  | validateSurah }}</p>
                     </a>
                 </td>
                 <td style="text-align: right">
