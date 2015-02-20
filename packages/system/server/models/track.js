@@ -36,6 +36,7 @@ var TrackSchema = new Schema({
  * Statics
  */
 TrackSchema.statics.load = function(id, cb) {
+	console.log(id);
   this.findOne({
     _id: id
   }).populate().exec(cb);

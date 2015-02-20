@@ -117,11 +117,13 @@ angular.module('mean.system').directive('jplayer', function($rootScope) {
 			};
 
 			scope.$watch(attrs.audio, updatePlayer);
+			/*
 			$rootScope.$watch('streamAudio', function() {
 				$player
 					.jPlayer('setMedia', {mp3: $rootScope.streamAudio})
 					.jPlayer('play');
 			});
+			*/
 			updatePlayer();
 
 		}

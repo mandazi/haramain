@@ -8,3 +8,15 @@ angular.module('mean.system').factory('GetHaramainAudioData', ['$http',
 		});
 	}
 ]);
+
+angular.module('mean.system').factory('FindTrack', ['$http',
+	function($http) {
+
+		return function (trackId) {
+			return $http.get('track/' + trackId).then(function(response) {
+				return response;
+			});
+		};
+
+	}
+]);

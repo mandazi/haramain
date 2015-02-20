@@ -20,7 +20,7 @@ exports.all = function(req, res) {
 };
 */
 /**
- * List of Articles
+ * List of Audio Tracks
  */
 exports.all = function(req, res) {
 	Track.find().sort('-date').exec(function(err, tracks) {
@@ -35,6 +35,22 @@ exports.all = function(req, res) {
 	});
 };
 
+
+/**
+ * Find track by id
+ */
+exports.track = function(req, res, next, id) {
+	Track.findOne({ _id: id }).sort('-date').exec(function(err, track) {
+		if (err) {
+			console.log(err);
+			return res.json(500, {
+				error: 'Cannot find the track'
+			});
+		}
+		res.json(track);
+
+	});
+};
 
 
 

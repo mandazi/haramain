@@ -1,4 +1,4 @@
-<section class="container-fluid" data-ng-controller="IndexController">
+<section class="container-fluid" data-ng-controller="IndexController" data-ng-init="loadAll()">
    <!-- <a class="now-playing" href forward-button>Now Playing <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
     <br>
     -->
@@ -15,13 +15,13 @@
     		<tr data-ng-repeat="item in audioTracks">
 
     			<td>
-                    <a href="#!/track/{{$index}}">
+                    <a href="#!/track/{{ item._id }}">
                         <p>{{ item.sheikh }}</p>
                         <p>{{ item.surah  | validateSurah }}</p>
                     </a>
                 </td>
                 <td style="text-align: right">
-                    <a href="#!/track/{{$index}}">
+                    <a href="#!/track/{{ item._id }}">
                         <p>{{ item.prayerLocation }}</p>
                     </a>
                 </td>
