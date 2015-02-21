@@ -12,8 +12,7 @@ angular.module('mean.system').controller('TrackController', ['$scope', 'Global',
 		  FindTrack($stateParams.trackId).then(function (response) {
 			  $scope.track = response.data;
 
-			  $rootScope.streamAudio = $scope.track.url;
-
+			  $rootScope.streamAudio = $scope.track.filePath;
 
 			  $rootScope.sheikh = $scope.track.sheikh;
 			  $rootScope.surah = $scope.track.surah;

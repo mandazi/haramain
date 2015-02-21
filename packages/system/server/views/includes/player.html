@@ -1,7 +1,7 @@
 <!-- Footer where the player goes -->
 <section data-ng-controller="JPlayerController">
     <div class="footer" data-ng-show="resultLoaded">
-        <div class='glyphicon live-stream-play glyphicon-play' id="jplayer-control" data-audio="streamAudio" data-autoplay="true" data-pauseothers="true" jplayer></div>
+        <div data-ng-if="resultLoaded" class='glyphicon live-stream-play glyphicon-play' id="jplayer-control" data-audio="streamAudio" data-autoplay="true" data-pauseothers="true" jplayer></div>
 
         <div class="metadata">
 

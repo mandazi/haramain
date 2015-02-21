@@ -23,6 +23,7 @@ angular.module('mean.system').directive('jplayer', function($rootScope) {
 			};
 
 			var updatePlayer = function() {
+			//	console.log(scope.$eval(attrs.audio));
 				$player.jPlayer({
 					// Flash fallback for outdated browser not supporting HTML5 audio/video tags
 					// http://jplayer.org/download/
@@ -117,13 +118,15 @@ angular.module('mean.system').directive('jplayer', function($rootScope) {
 			};
 
 			scope.$watch(attrs.audio, updatePlayer);
-			/*
+
 			$rootScope.$watch('streamAudio', function() {
 				$player
 					.jPlayer('setMedia', {mp3: $rootScope.streamAudio})
 					.jPlayer('play');
+
 			});
-			*/
+
+
 			updatePlayer();
 
 		}
