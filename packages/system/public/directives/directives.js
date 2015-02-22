@@ -143,7 +143,7 @@ angular.module('mean.system').directive('scrollText', function ($compile) {
 		var scrollText = '<marquee style="width: 120px" scrollamount="2" behavior="scroll" direction="left" id="scroll-title">' + contentType + '</marquee>';
 		var staticText = '<span>' + contentType + '</span>';
 
-		if(contentType.length > 25 && browserWidth < 480) {
+		if(contentType.length > 20 && browserWidth < 480) {
 			template = scrollText;
 		} else {
 			template = staticText;
