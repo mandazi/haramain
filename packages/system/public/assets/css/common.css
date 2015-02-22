@@ -127,10 +127,11 @@ footer p {
 }
 
 .album-art {
+    font-size: 12px;
     left: -14px;
     position: relative;
     text-align: right;
-    top: -30px;
+    top: -28px;
 }
 
 .play-song {
