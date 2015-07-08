@@ -4,7 +4,8 @@
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/linnovate/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
-# Haramain app is an easy way to listen to the audio files posted on the Haramain blog.
+# Haramain
+This app is an easy way to listen to the audio files posted on the Haramain blog. It uses the MEAN.io stack.
 
 
 ## Credits
