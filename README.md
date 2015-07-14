@@ -11,4 +11,4 @@ This app is an easy way to listen to the audio files posted on the Haramain blog
 ## Credits
 
  * Started by <a href="https://github.com/hayatnoor">Hayat Noor</a>
- * Contributions by <a href="https://github.com/mandazi">Amir Sahib</a>
+ * Contributions by <a href="https://github.com/mandazi">Amir Sahib</a> (Twitter: <a href="https://twitter.com/amirsahib">@amirsahib</a>)
